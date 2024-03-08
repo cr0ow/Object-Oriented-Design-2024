@@ -1,4 +1,4 @@
-= Zadanie 1: Paradygmaty
+# Zadanie 1: Paradygmaty
 
 - Procedura do generowania 50 losowych liczb od 0 do 100
 - Procedura do sortowania liczb
