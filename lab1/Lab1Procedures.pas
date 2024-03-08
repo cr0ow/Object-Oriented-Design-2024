@@ -1,14 +1,20 @@
-program Lab1;
+unit Lab1Procedures;
+
+interface
 
 type
-    integerArray = array of integer;
+    integerArray = array of longint;
+
 var
     generated: integerArray;
-    a: integer;
-    b: integer;
-    c: integer;
 
-procedure generate(var start, finish, length: integer);
+procedure generate(var start, finish, length: longint);
+procedure sort(length: longint);
+procedure show(length: longint);
+
+implementation
+
+procedure generate(var start, finish, length: longint);
 var
   i: integer;
 begin
@@ -17,7 +23,7 @@ begin
         generated[i] := Random(finish) + start;
 end;
 
-procedure sort(length: integer);
+procedure sort(length: longint);
 var
     i: integer;
     j: integer;
@@ -33,7 +39,7 @@ begin
             end;
 end;
 
-procedure show(length: integer);
+procedure show(length: longint);
 var
   i: integer;
 begin
@@ -42,12 +48,4 @@ begin
   writeln;
 end;
 
-begin
-    a := 0;
-    b := 100;
-    c := 50;
-    setlength(generated, c);
-    generate(a, b, c);
-    sort(c);
-    show(c);
 end.
