@@ -3,27 +3,27 @@ unit Lab1Procedures;
 interface
 
 type
-    integerArray = array of longint;
+    integerArray = array of integer;
 
 var
     generated: integerArray;
 
-procedure generate(var start, finish, length: longint);
-procedure sort(length: longint);
-procedure show(length: longint);
+procedure generate(var start, finish, length: integer);
+procedure sort(length: integer);
+procedure show(length: integer);
 
 implementation
 
-procedure generate(var start, finish, length: longint);
+procedure generate(var start, finish, length: integer);
 var
   i: integer;
 begin
     randomize;
     for i := 0 to length do
-        generated[i] := Random(finish) + start;
+        generated[i] := Random(finish - start) + start;
 end;
 
-procedure sort(length: longint);
+procedure sort(length: integer);
 var
     i: integer;
     j: integer;
@@ -39,7 +39,7 @@ begin
             end;
 end;
 
-procedure show(length: longint);
+procedure show(length: integer);
 var
   i: integer;
 begin

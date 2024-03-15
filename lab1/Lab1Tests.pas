@@ -1,31 +1,16 @@
-unit Lab1Tests;
-
-{$mode objfpc}{$H+}
-
-interface
+program Lab1Tests;
 
 uses
-  Classes, SysUtils, fpcunit, testutils, testregistry, Lab1Procedures;
+  Lab1Procedures;
 
-type
-  TLab1Tests = class(TTestCase)
-  private
-    testLength: longint;
-    testFrom: longint;
-    testTo: longint;
-  protected
-    procedure SetUp; override;
-    procedure TearDown; override;
-  public
-    procedure GenerateTest;
-    procedure SortTest;
-end;
-
-implementation
-
-procedure TLab1Tests.SetUp;
 var
-  i: longint;
+  testLength: integer;
+  testFrom: integer;
+  testTo: integer;
+
+procedure setUp;
+var
+  i: integer;
 begin
   testLength := 10;
   testFrom := 5;
@@ -33,32 +18,86 @@ begin
 	setlength(generated, testLength);
   for i := 0 to testLength do
 		generated[i] := 0;
-  writeln('**TESTS**')
 end;
 
-procedure TLab1Tests.TearDown;
-begin
-  writeln();
-end;
-
-procedure TLab1Tests.GenerateTest;
+procedure shouldgenerateTable;
 var
-  i: longint;
+  i: integer;
 begin
   generate(testFrom, testTo, testLength);
   for i := 0 to testLength do
-    AssertTrue(generated[i] > 0);
+    if generated[i] = 0 then begin
+      writeln('shouldUpdateAllCells: error !!!');
+      exit;
+    end;
+  writeln('shouldUpdateAllCells: passsed');
 end;
 
-procedure TLab1Tests.SortTest;
+procedure shouldGenerateTableWithValidValues;
 var
-  i: longint;
+  i: integer;
+begin
+  generate(testFrom, testTo, testLength);
+  for i := 0 to testLength do
+    writel
+    if generated[i] < testFrom or generated[i] > testTo then begin
+      writeln('shouldUpdateAllCellsWithValidValues: error !!!');
+      exit;
+    end;
+  writeln('shouldUpdateAllCellsWithValidValues: passsed');
+end;
+
+procedure shouldSortRandomArray;
+var
+  i: integer;
 begin
   sort(testLength);
   for i := 0 to testLength - 1 do
-    AssertTrue(generated[i] <= generated[i + 1]);
+    if generated[i] > generated[i + 1] then begin
+      writeln('shouldSortRandomArray: error !!!');
+      exit;
+    end;
+  writeln('shouldSortRandomArray: passsed');
 end;
 
-initialization
-  RegisterTest(TLab1Tests);
+procedure shouldSortRevertedArray;
+var
+  i: integer;
+begin
+  for i := 0 to testLength do
+    generated[i] = testLength - i
+  sort(testLength);
+  for i := 0 to testLength - 1 do
+    if generated[i] > generated[i + 1] then begin
+      writeln('shouldSortRevertedArray: error !!!');
+      exit;
+    end;
+  writeln('shouldSortRevertedArray: passsed');
+end;
+
+procedure shouldSortArrayWithNegativeNumbers;
+var
+  i: integer;
+begin
+  testFrom := -100;
+  generate(testFrom, testTo, testLength)
+  sort(testLength);
+  for i := 0 to testLength - 1 do
+    if generated[i] > generated[i + 1] then begin
+      writeln('shouldSortArrayWithNegativeNumbers: error !!!');
+      exit;
+    end;
+  writeln('shouldSortArrayWithNegativeNumbers: passsed');
+end;
+
+begin
+
+wrintln('**TESTS**')
+setUp();
+shouldGenerateTable();
+shouldGenerateTableWithValidValues();
+shouldSortRandomArray();
+shouldSortRevertedArray();
+shouldSortArrayWithNegativeNumbers();
+
 end.

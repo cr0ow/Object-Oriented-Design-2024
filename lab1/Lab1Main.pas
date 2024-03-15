@@ -4,9 +4,9 @@ uses
   Lab1Procedures;
 
 var
-  a: longint;
-  b: longint;
-  c: longint;
+  a: integer;
+  b: integer;
+  c: integer;
 
 begin
   writeln('**MAIN**');
