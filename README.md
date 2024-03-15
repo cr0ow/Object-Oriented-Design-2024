@@ -1,4 +1,4 @@
-**Zadanie 1** Docker
+**Zadanie 1** Paradygmaty
 
 :white_check_mark: Procedura do generowania 50 losowych liczb od 0 do 100
 
