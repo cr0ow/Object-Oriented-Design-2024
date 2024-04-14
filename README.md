@@ -29,3 +29,19 @@ Demo: [lab1-demo.zip](https://github.com/cr0ow/Object-Oriented-Design-2024/tree/
 Kod: [lab3](https://github.com/cr0ow/Object-Oriented-Design-2024/tree/master/lab3)
 
 Demo: [lab3-demo](https://github.com/cr0ow/Object-Oriented-Design-2024/assets/70718059/111ba521-069d-419e-b6a1-5da06e8e13f1)
+
+**Zadanie 4** Wzorce strukturalne
+
+:white_check_mark: Należy stworzyć aplikację we frameworki echo w j. Go, która będzie miała kontroler Pogody, która pozwala na pobieranie danych o pogodzie (lub akcjach giełdowych)
+
+:white_check_mark: Należy stworzyć model Pogoda (lub Giełda) wykorzystując gorm, a dane załadować z listy przy uruchomieniu
+
+:white_check_mark: Należy stworzyć klasę proxy, która pobierze dane z serwisu zewnętrznego podczas zapytania do naszego kontrolera
+
+:white_check_mark: Należy zapisać pobrane dane z zewnątrz do bazy danych
+
+:white_check_mark: Należy rozszerzyć endpoint na więcej niż jedną lokalizację (Pogoda), lub akcje (Giełda) zwracając JSONa
+
+Kod: [lab4](https://github.com/cr0ow/Object-Oriented-Design-2024/tree/master/lab4)
+
+Demo: [lab4-demo](https://github.com/cr0ow/Object-Oriented-Design-2024/assets/70718059/c250ed21-cae6-4eb1-b124-ca1d91bc1068)
