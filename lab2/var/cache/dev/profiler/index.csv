@@ -1,0 +1,17 @@
+0100ba,127.0.0.1,GET,https://127.0.0.1:8000/product,1713025480,,200,request
+6f20ca,127.0.0.1,GET,https://127.0.0.1:8000/,1713025522,,404,request
+e6a679,127.0.0.1,GET,https://127.0.0.1:8000/,1713025773,,404,request
+c0d40e,127.0.0.1,GET,https://127.0.0.1:8000/product,1713025783,,200,request
+c52ad6,127.0.0.1,GET,https://127.0.0.1:8000/product/new,1713025792,,200,request
+fa9667,127.0.0.1,POST,https://127.0.0.1:8000/product/new,1713025802,,303,request
+973366,127.0.0.1,GET,https://127.0.0.1:8000/product,1713025807,,200,request
+9942ee,127.0.0.1,GET,https://127.0.0.1:8000/product,1713025808,,200,request
+dded55,::1,GET,https://localhost:8000/product,1713025987,,200,request
+840574,127.0.0.1,GET,https://127.0.0.1:8000/product,1713037346,5a73a1,500,request
+5a73a1,127.0.0.1,GET,https://127.0.0.1:8000/product,1713037346,,500,request
+0f4988,127.0.0.1,GET,https://127.0.0.1:8000/product,1713088842,,301,request
+6e65d4,127.0.0.1,GET,https://127.0.0.1:8000/product/,1713088845,,200,request
+ad66f1,::1,GET,https://localhost:8000/product,1713088930,,301,request
+0f9796,::1,GET,https://localhost:8000/product/,1713088931,,200,request
+d83d3d,::1,GET,http://localhost:8000/product,1713089678,,301,request
+467b17,::1,GET,http://localhost:8000/product/,1713089678,,200,request
