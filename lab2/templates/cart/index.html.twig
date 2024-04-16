@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+{% extends 'base.html.twig' %}
 
-<title>Cart index</title>
+{% block title %}Cart index{% endblock %}
 
 {% block body %}
     <h1>Cart index</h1>
@@ -9,7 +9,7 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>ProductIds</th>
+                <th>Products</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -17,7 +17,7 @@
         {% for cart in carts %}
             <tr>
                 <td>{{ cart.id }}</td>
-                <td>{{ cart.productIds ? cart.productIds|join(', ') : '' }}</td>
+                <td>{{ cart.products ? cart.products|join(', ') : '' }}</td>
                 <td>
                     <a href="{{ path('app_cart_show', {'id': cart.id}) }}">show</a>
                     <a href="{{ path('app_cart_edit', {'id': cart.id}) }}">edit</a>

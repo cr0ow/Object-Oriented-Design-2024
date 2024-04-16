@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+{% extends 'base.html.twig' %}
 
-<title>Cart</title>
+{% block title %}Cart{% endblock %}
 
 {% block body %}
     <h1>Cart</h1>
@@ -12,8 +12,8 @@
                 <td>{{ cart.id }}</td>
             </tr>
             <tr>
-                <th>ProductIds</th>
-                <td>{{ cart.productIds ? cart.productIds|join(', ') : '' }}</td>
+                <th>Products</th>
+                <td>{{ cart.products ? cart.products|join(', ') : '' }}</td>
             </tr>
         </tbody>
     </table>

@@ -11,16 +11,13 @@ class Product
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id;
+    private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $name;
+    private ?string $name = null;
 
     #[ORM\Column]
-    private ?int $categoryId;
-
-    #[ORM\Column(length: 255)]
-    private ?string $description;
+    private ?int $categoryId = null;
 
     public function getId(): ?int
     {
@@ -54,18 +51,6 @@ class Product
     public function setCategoryId(int $categoryId): static
     {
         $this->categoryId = $categoryId;
-
-        return $this;
-    }
-
-    public function getDescription(): ?string
-    {
-        return $this->description;
-    }
-
-    public function setDescription(string $description): static
-    {
-        $this->description = $description;
 
         return $this;
     }

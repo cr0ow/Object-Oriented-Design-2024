@@ -12,10 +12,10 @@ class Cart
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id;
+    private ?int $id = null;
 
     #[ORM\Column(type: Types::ARRAY)]
-    private array $productIds = [];
+    private array $products = [];
 
     public function getId(): ?int
     {
@@ -29,14 +29,14 @@ class Cart
         return $this;
     }
 
-    public function getProductIds(): array
+    public function getProducts(): array
     {
-        return $this->productIds;
+        return $this->products;
     }
 
-    public function setProductIds(array $productIds): static
+    public function setProducts(array $products): static
     {
-        $this->productIds = $productIds;
+        $this->products = $products;
 
         return $this;
     }

@@ -22,24 +22,29 @@ class ProductController extends AbstractController
         ]);
     }
 
-    #[Route('/new', name: 'app_product_new', methods: ['GET', 'POST'])]
+    #[Route('/new', name: 'app_product_new', methods: ['GET'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
         $product = new Product();
         $form = $this->createForm(ProductType::class, $product);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager->persist($product);
-            $entityManager->flush();
-
-            return $this->redirectToRoute('app_product_index', [], Response::HTTP_SEE_OTHER);
-        }
-
         return $this->render('product/new.html.twig', [
             'product' => $product,
             'form' => $form,
         ]);
+    }
+
+    #[Route('/new', name: 'app_product_new_post', methods: ['POST'])]
+    public function newPost(Request $request, EntityManagerInterface $entityManager): Response
+    {
+        $body = $request->toArray();
+        $product = new Product();
+        $product->setName($body['name']);
+        $product->setCategoryId($body['categoryId']);
+        $entityManager->persist($product);
+        $entityManager->flush();
+        return $this->redirectToRoute('app_product_index', []);
     }
 
     #[Route('/{id}', name: 'app_product_show', methods: ['GET'])]
@@ -71,11 +76,8 @@ class ProductController extends AbstractController
     #[Route('/{id}', name: 'app_product_delete', methods: ['POST'])]
     public function delete(Request $request, Product $product, EntityManagerInterface $entityManager): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$product->getId(), $request->getPayload()->get('_token'))) {
-            $entityManager->remove($product);
-            $entityManager->flush();
-        }
-
-        return $this->redirectToRoute('app_product_index', [], Response::HTTP_SEE_OTHER);
+        $entityManager->remove($product);
+        $entityManager->flush();
+        return $this->redirectToRoute('app_product_index', []);
     }
 }
