@@ -1,3 +1,17 @@
 *.o
 *.x
 lab4/.idea
+
+lab2/.env.local
+lab2/.env.local.php
+lab2/.env.*.local
+lab2/config/secrets/prod/prod.decrypt.private.php
+lab2/public/bundles/
+lab2/var/
+lab2/vendor/
+lab2/phpunit.xml
+lab2.phpunit.result.cache
+lab2.phpunit.result.cache
+lab2/phpunit.xml
+lab2/public/assets/
+lab2/assets/vendor/
