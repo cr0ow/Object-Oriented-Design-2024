@@ -14,6 +14,22 @@ Kod: [lab1](https://github.com/cr0ow/Object-Oriented-Design-2024/tree/master/lab
 
 Demo: [lab1-demo.zip](https://github.com/cr0ow/Object-Oriented-Design-2024/tree/master/demos)
 
+**Zadanie 2** Wzorce architektury
+
+:white_check_mark: Należy stworzyć jeden model z kontrolerem z produktami, zgodnie z CRUD
+
+:white_check_mark: Należy stworzyć skrypty do testów endpointów via curl
+
+:white_check_mark: Należy stworzyć dwa dodatkowe kontrolery wraz z modelami
+
+:white_check_mark: Należy stworzyć widoki do wszystkich kontrolerów
+
+:x: Stworzenie panelu administracyjnego z mockowanym logowaniem
+
+Kod: [lab2](https://github.com/cr0ow/Object-Oriented-Design-2024/tree/master/lab1)
+
+Demo: [lab2-mw-projobj](https://github.com/cr0ow/Object-Oriented-Design-2024/tree/master/demos)
+
 **Zadanie 3** Wzorce kreacyjne
 
 :white_check_mark: Należy stworzyć jeden kontroler wraz z danymi wyświetlanymi z listy na endpoint’cie w formacie JSON - Kotlin + Spring Boot

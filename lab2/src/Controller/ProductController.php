@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Product;
-use App\Form\ProductType;
+use App\Form\Product1Type;
 use App\Repository\ProductRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -22,29 +22,24 @@ class ProductController extends AbstractController
         ]);
     }
 
-    #[Route('/new', name: 'app_product_new', methods: ['GET'])]
+    #[Route('/new', name: 'app_product_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
         $product = new Product();
-        $form = $this->createForm(ProductType::class, $product);
+        $form = $this->createForm(Product1Type::class, $product);
         $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager->persist($product);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('app_product_index', [], Response::HTTP_SEE_OTHER);
+        }
 
         return $this->render('product/new.html.twig', [
             'product' => $product,
             'form' => $form,
         ]);
-    }
-
-    #[Route('/new', name: 'app_product_new_post', methods: ['POST'])]
-    public function newPost(Request $request, EntityManagerInterface $entityManager): Response
-    {
-        $body = $request->toArray();
-        $product = new Product();
-        $product->setName($body['name']);
-        $product->setCategoryId($body['categoryId']);
-        $entityManager->persist($product);
-        $entityManager->flush();
-        return $this->redirectToRoute('app_product_index', []);
     }
 
     #[Route('/{id}', name: 'app_product_show', methods: ['GET'])]
@@ -58,7 +53,7 @@ class ProductController extends AbstractController
     #[Route('/{id}/edit', name: 'app_product_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Product $product, EntityManagerInterface $entityManager): Response
     {
-        $form = $this->createForm(ProductType::class, $product);
+        $form = $this->createForm(Product1Type::class, $product);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -76,8 +71,11 @@ class ProductController extends AbstractController
     #[Route('/{id}', name: 'app_product_delete', methods: ['POST'])]
     public function delete(Request $request, Product $product, EntityManagerInterface $entityManager): Response
     {
-        $entityManager->remove($product);
-        $entityManager->flush();
-        return $this->redirectToRoute('app_product_index', []);
+        if ($this->isCsrfTokenValid('delete'.$product->getId(), $request->getPayload()->get('_token'))) {
+            $entityManager->remove($product);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('app_product_index', [], Response::HTTP_SEE_OTHER);
     }
 }

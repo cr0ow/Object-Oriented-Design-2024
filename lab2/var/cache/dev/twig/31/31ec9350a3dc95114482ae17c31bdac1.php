@@ -93,6 +93,6 @@ class __TwigTemplate_52e836785f1524a4e837915c6e5064fb extends Template
     {{ form_widget(form) }}
     <button class=\"btn\">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
-", "product/_form.html.twig", "/home/mwrona/Studia/temp/lab2/templates/product/_form.html.twig");
+", "product/_form.html.twig", "/home/mwrona/Studia/2sem/Object-Oriented-Design-2024/lab2/templates/product/_form.html.twig");
     }
 }

@@ -142,6 +142,6 @@ class __TwigTemplate_36756bb830c4ce5f64dac7b5c611f8a2 extends Template
 
     <a href=\"{{ path('app_product_index') }}\">back to list</a>
 {% endblock %}
-", "product/new.html.twig", "/home/mwrona/Studia/temp/lab2/templates/product/new.html.twig");
+", "product/new.html.twig", "/home/mwrona/Studia/2sem/Object-Oriented-Design-2024/lab2/templates/product/new.html.twig");
     }
 }
