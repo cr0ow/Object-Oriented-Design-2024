@@ -61,3 +61,19 @@ Demo: [lab3-demo](https://github.com/cr0ow/Object-Oriented-Design-2024/assets/70
 Kod: [lab4](https://github.com/cr0ow/Object-Oriented-Design-2024/tree/master/lab4)
 
 Demo: [lab4-demo](https://github.com/cr0ow/Object-Oriented-Design-2024/assets/70718059/c250ed21-cae6-4eb1-b124-ca1d91bc1068)
+
+**Zadanie 5** Wzorce behawioralne
+
+:white_check_mark: W ramach projektu należy stworzyć dwa komponenty: Produkty oraz Płatności; Płatności powinny wysyłać do aplikacji serwerowej dane, a w Produktach powinniśmy pobierać dane o produktach z aplikacji serwerowej
+
+:white_check_mark: Należy dodać Koszyk wraz z widokiem; należy wykorzystać routing
+
+:white_check_mark: Dane pomiędzy wszystkimi komponentami powinny być przesyłane za pomocą React hooks
+
+:white_check_mark: Należy dodać skrypt uruchamiający aplikację serwerową oraz kliencką na dockerze via docker-compose
+
+:x: Należy wykorzystać axios’a oraz dodać nagłówki pod CORS
+
+Kod: [lab5](https://github.com/cr0ow/Object-Oriented-Design-2024/tree/master/lab5)
+
+Demo: [lab5-demo](https://github.com/cr0ow/Object-Oriented-Design-2024/assets/70718059/2ab69645-2164-404f-9c3e-35c3b018b3e0)
