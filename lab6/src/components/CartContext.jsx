@@ -27,7 +27,7 @@ export const CartProvider = ({ children }) => {
     }), [cartItems, addToCart, redirect, setCartItems]);
 
     return (
-        <CartContext.Provider value={{contextValue}}>
+        <CartContext.Provider value={contextValue}>
             <div id={'container'}>
                 {children}
             </div>
