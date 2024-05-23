@@ -77,3 +77,19 @@ Demo: [lab4-demo](https://github.com/cr0ow/Object-Oriented-Design-2024/assets/70
 Kod: [lab5](https://github.com/cr0ow/Object-Oriented-Design-2024/tree/master/lab5)
 
 Demo: [lab5-demo](https://github.com/cr0ow/Object-Oriented-Design-2024/assets/70718059/2ab69645-2164-404f-9c3e-35c3b018b3e0)
+
+**Zadanie 6** Zapaszki
+
+:white_check_mark: Należy dodać eslint w hookach gita
+
+:white_check_mark: Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod aplikacji klienckiej)
+
+:white_check_mark: Należy wyeliminować wszystkie zapaszki w kodzie w Sonarze (kod aplikacji klienckiej)
+
+:white_check_mark: Należy wyeliminować wszystkie podatności oraz błędy bezpieczeństwa w kodzie w Sonarze (kod aplikacji klienckiej)
+
+:x: Zredukować duplikaty kodu do 0%
+
+Kod: [lab6](https://github.com/cr0ow/Object-Oriented-Design-2024/tree/master/lab6)
+
+Demo: ![lab6-demo](https://github.com/cr0ow/E-Business-2024/tree/master/demos/lab6-demo.png)
