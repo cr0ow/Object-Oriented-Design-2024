@@ -92,4 +92,4 @@ Demo: [lab5-demo](https://github.com/cr0ow/Object-Oriented-Design-2024/assets/70
 
 Kod: [lab6](https://github.com/cr0ow/Object-Oriented-Design-2024/tree/master/lab6)
 
-Demo: ![lab6-demo](https://github.com/cr0ow/E-Business-2024/tree/master/demos/lab6-demo.png)
+Demo: ![lab6-demo](https://github.com/cr0ow/Object-Oriented-Design-2024/tree/master/demos/lab6-demo.png)
