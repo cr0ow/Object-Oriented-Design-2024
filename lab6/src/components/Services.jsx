@@ -25,7 +25,7 @@ function Services() {
             <ul>
                 {
                     services.map(((service, index) => {
-                        return (<li key={index}>{service.name}, {service.price} PLN <button
+                        return (<li key={service.id}>{service.name}, {service.price} PLN <button
                             onClick={() => addToCart(service)}>Add to cart</button></li>);
                     }))
                 }

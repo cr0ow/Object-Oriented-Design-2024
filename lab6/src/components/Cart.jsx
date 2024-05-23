@@ -13,7 +13,7 @@ function Cart() {
             <h1>Cart</h1>
             <ul>
                 {cartItems.map((service, index) => (
-                    <li key={index}> {service.name} </li>
+                    <li key={service.id}> {service.name} </li>
                 ))}
             </ul>
             <h2>Amount: {amount.toFixed(2)} PLN</h2>

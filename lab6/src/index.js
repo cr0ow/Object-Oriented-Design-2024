@@ -10,17 +10,15 @@ import {CartProvider} from "./components/CartContext";
 
 function App(){
     return (
-        <>
-            <BrowserRouter>
-                <CartProvider>
-                    <Routes>
-                        <Route path="/" element={<Services />} />
-                        <Route path="/cart" element={<Cart />} />
-                        <Route path="/payments" element={<Payments />} />
-                    </Routes>
-                </CartProvider>
-            </BrowserRouter>
-        </>
+        <BrowserRouter>
+            <CartProvider>
+                <Routes>
+                    <Route path="/" element={<Services />} />
+                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/payments" element={<Payments />} />
+                </Routes>
+            </CartProvider>
+        </BrowserRouter>
     );
 }
 
