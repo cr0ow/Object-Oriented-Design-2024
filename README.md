@@ -93,3 +93,19 @@ Demo: [lab5-demo](https://github.com/cr0ow/Object-Oriented-Design-2024/assets/70
 Kod: [lab6](https://github.com/cr0ow/Object-Oriented-Design-2024/tree/master/lab6)
 
 Demo: ![lab6-demo](https://github.com/cr0ow/Object-Oriented-Design-2024/tree/master/demos/lab6-demo.png)
+
+**Zadanie 7** Antywzorce
+
+:white_check_mark: Należy stworzyć kontroler wraz z modele Produktów zgodny z CRUD w ORM Fluent
+
+:white_check_mark: Należy stworzyć szablony w Leaf
+
+:white_check_mark: Należy stworzyć drugi model oraz kontroler Kategorii wraz z relacją
+
+:x: Należy wykorzystać Redis do przechowywania danych
+
+:x: Wrzucić aplikację na heroku
+
+Kod: [lab7](https://github.com/cr0ow/Object-Oriented-Design-2024/tree/master/lab7)
+
+Demo: [lab7-demo](https://github.com/cr0ow/Object-Oriented-Design-2024/assets/70718059/26349b84-a29b-46b0-adb8-bf0c1932bd43)

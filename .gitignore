@@ -1,3 +1,5 @@
 *.o
 *.x
 lab4/.idea
+.idea
+lab7/.build
