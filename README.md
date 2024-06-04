@@ -109,3 +109,19 @@ Demo: ![lab6-demo](https://github.com/cr0ow/Object-Oriented-Design-2024/tree/mas
 Kod: [lab7](https://github.com/cr0ow/Object-Oriented-Design-2024/tree/master/lab7)
 
 Demo: [lab7-demo](https://github.com/cr0ow/Object-Oriented-Design-2024/assets/70718059/26349b84-a29b-46b0-adb8-bf0c1932bd43)
+
+**Zadanie 8** Mobile first
+
+:white_check_mark: stworzenie listy kategorii oraz produktów
+
+:white_check_mark: dodać koszyk
+
+:x: stworzyć bazę w Realmie
+
+:x: dodać płatności w Stripe
+
+:x: logowanie i rejestrację via Oauth2 dodać
+
+Kod: [lab8](https://github.com/cr0ow/Object-Oriented-Design-2024/tree/master/lab8)
+
+Demo: [lab8-demo](https://github.com/cr0ow/Object-Oriented-Design-2024/assets/70718059/90afb2fd-8384-4f10-88b2-b8508146e3f5)
