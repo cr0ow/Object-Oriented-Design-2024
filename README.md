@@ -125,3 +125,19 @@ Demo: [lab7-demo](https://github.com/cr0ow/Object-Oriented-Design-2024/assets/70
 Kod: [lab8](https://github.com/cr0ow/Object-Oriented-Design-2024/tree/master/lab8)
 
 Demo: [lab8-demo](https://github.com/cr0ow/Object-Oriented-Design-2024/assets/70718059/90afb2fd-8384-4f10-88b2-b8508146e3f5)
+
+**Zadanie 9** Testy
+
+:white_check_mark: Należy stworzyć 20 przypadków testowych w CypressJS lub Selenium (Kotlin, Python, Java, JS, Go, Scala)
+
+:white_check_mark: Należy rozszerzyć testy funkcjonalne, aby zawierały minimum 50 asercji
+
+:white_check_mark: Należy stworzyć testy jednostkowe do wybranego wcześniejszego projektu z minimum 50 asercjami
+
+:x: Należy dodać testy API, należy pokryć wszystkie endpointy z minimum jednym scenariuszem negatywnym per endpoint
+
+:x: Należy uruchomić testy funkcjonalne na Browserstacku
+
+Kod: [lab9](https://github.com/cr0ow/Object-Oriented-Design-2024/tree/master/lab9)
+
+Demo: [lab9-demo](https://github.com/cr0ow/Object-Oriented-Design-2024/assets/70718059/4399c594-ed9b-427d-8ec3-221e4c5ff913)
